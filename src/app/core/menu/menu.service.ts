@@ -221,7 +221,7 @@ const MENUITEMS = [
   // },
   {
     state: 'user',
-    name: 'USER',
+    name: 'User',
     type: 'sub',
     icon: 'basic-webpage-img-txt',
     children: [
@@ -235,7 +235,7 @@ const MENUITEMS = [
       // },
       {
         state: 'filter',
-        name: 'FILTER'
+        name: 'Users Listing'
       },
       // {
       //   state: 'paging',

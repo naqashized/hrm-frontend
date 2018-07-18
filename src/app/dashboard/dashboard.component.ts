@@ -64,9 +64,9 @@ export class DashboardComponent {
   gaugePreviousValue = 70;
 
   constructor(private router: Router, @Inject(LOCAL_STORAGE) public local: WebStorageService) {
-    if(this.local.get('token') == undefined){
-      this.router.navigate ( [ '/authentication/signin' ] );
-    }
+    // if(this.local.get('token') == undefined){
+    //   this.router.navigate ( [ '/authentication/signin' ] );
+    // }
     Object.assign(this, {
       single
     });

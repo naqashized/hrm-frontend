@@ -20,6 +20,7 @@ import { HttpModule, JsonpModule } from '@angular/http';
 import { UserService } from '../services/user.service';
 import { LoginService } from '../services/login.service';
 import { StorageServiceModule, WebStorageService} from 'angular-webstorage-service';
+//import { CanActivate} from '@angular/router';
 
 import {
   MenuComponent,

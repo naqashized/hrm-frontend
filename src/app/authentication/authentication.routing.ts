@@ -8,10 +8,16 @@ import { LockscreenComponent } from './lockscreen/lockscreen.component';
 export const AuthenticationRoutes: Routes = [
   {
     path: '',
-    children: [{
+    children: [
+    {
       path: 'signin',
       component: SigninComponent
-    }, {
+    },
+    {
+      path: '',
+      component: SigninComponent
+    },
+    {
       path: 'signup',
       component: SignupComponent
     }, {

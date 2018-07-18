@@ -29,7 +29,7 @@ export class LoginService {
 
   logout(token):Observable<any>{
     // ...using get request
-	 return this.http.post(this.baseUrl+'/users/logout?access_token='+token, null, this.options)
+	 return this.http.post(this.baseUrl+'users/logout?access_token='+token, null, this.options)
 	                // ...and calling .json() on the response to return data
 	                 .map((res:Response) => res.json())
 	                 //...errors if any
