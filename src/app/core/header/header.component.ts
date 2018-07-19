@@ -27,7 +27,9 @@ export class HeaderComponent {
         this.local.set('token',null)
         this.router.navigate ( [ '/authentication/signin' ] );
         },
-        error => console.log(error));
-        
+        error => { this.local.set('token',null)
+                    this.router.navigate ( [ '/authentication/signin' ] );
+                }
+      );        
   }
 }
