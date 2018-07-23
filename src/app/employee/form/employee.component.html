@@ -1,0 +1,47 @@
+<div class="d-flex align-items-stretch flex-nowrap min-height-100 h-100">
+  <div class="card card-body mb-0 rounded-0 p-5 col-sm-12 col-md-6 col-lg-12">
+    <form [formGroup]="form" (ngSubmit)="onSubmit(form)">
+      <div class="mb-3">
+        <p class="ff-headers text-uppercase">New Designation</p>
+      </div>
+      <fieldset class="form-group">
+        <label for="firstName">
+          First Name
+        </label>
+        <input type="text" class="form-control" placeholder="firstName" [formControl]="form.controls['firstName']" [ngClass]="{'is-invalid': form.controls['firstName'].hasError('required') && form.controls['firstName'].touched}"/>
+        <div class="invalid-feedback" *ngIf="form.controls['firstName'].hasError('required') && form.controls['firstName'].touched">First Name is required.</div>
+      </fieldset>
+      <fieldset class="form-group">
+        <label for="secondName">
+          Second Name
+        </label>
+        <input type="text" class="form-control" placeholder="secondName" [formControl]="form.controls['secondName']" [ngClass]="{'is-invalid': form.controls['secondName'].hasError('required') && form.controls['secondName'].touched}"/>
+        <div class="invalid-feedback" *ngIf="form.controls['secondName'].hasError('required') && form.controls['secondName'].touched">Second Name is required.</div>
+      </fieldset>
+      <fieldset class="form-group">
+        <label for="description">
+          Phone
+        </label>
+        <input type="text" class="form-control" placeholder="phone" [formControl]="form.controls['phone']" [ngClass]="{'is-invalid': form.controls['phone'].hasError('required') && form.controls['phone'].touched}"/>
+        <div class="invalid-feedback" *ngIf="form.controls['phone'].hasError('required') && form.controls['phone'].touched">Phone is required.</div>
+      </fieldset>
+
+      <fieldset class="form-group">
+        <label for="designation">
+          Designation
+        </label>
+        <select [formControl]="form.controls['designationId']">
+          <option value=""> Choose Designation</option>
+          <option *ngFor="let designation of designations" [value]="designation.id">
+            {{designation.name}}
+          </option>
+      </select>
+        
+        <div class="invalid-feedback" *ngIf="form.controls['phone'].hasError('required') && form.controls['phone'].touched">Name is required.</div>
+      </fieldset>
+      <div class="custom-control custom-checkbox mb-3">
+        <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Save</button>
+      </div>
+    </form>
+  </div>
+</div>

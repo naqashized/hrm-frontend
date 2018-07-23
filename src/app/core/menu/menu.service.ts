@@ -255,178 +255,57 @@ const MENUITEMS = [
       // },
     ]
   },
-  // {
-  //   state: 'charts',
-  //   name: 'CHARTS',
-  //   type: 'sub',
-  //   icon: 'ecommerce-graph1',
-  //   badge: [
-  //     {
-  //       type: 'info',
-  //       value: '4'
-  //     }
-  //   ],
-  //   children: [
-  //     {
-  //       state: 'bar',
-  //       name: 'BAR'
-  //     },
-  //     {
-  //       state: 'pie',
-  //       name: 'PIE'
-  //     },
-  //     {
-  //       state: 'line',
-  //       name: 'LINE'
-  //     },
-  //     {
-  //       state: 'misc',
-  //       name: 'MISC'
-  //     }
-  //   ]
-  // },
-  // {
-  //   state: 'maps',
-  //   name: 'MAPS',
-  //   type: 'sub',
-  //   icon: 'basic-geolocalize-01',
-  //   children: [
-  //     {
-  //       state: 'google',
-  //       name: 'GOOGLE'
-  //     },
-  //     {
-  //       state: 'fullscreen',
-  //       name: 'FULLSCREEN'
-  //     }
-  //   ]
-  // },
-  // {
-  //   state: 'pages',
-  //   name: 'PAGES',
-  //   type: 'sub',
-  //   icon: 'basic-spread-text-bookmark',
-  //   children: [
-  //     {
-  //       state: 'invoice',
-  //       name: 'INVOICE'
-  //     },
-  //     {
-  //       state: 'forum',
-  //       name: 'FORUM'
-  //     },
-  //     {
-  //       state: 'timeline',
-  //       name: 'TIMELINE'
-  //     },
-  //     {
-  //       state: 'activity',
-  //       name: 'ACTIVITY'
-  //     },
-  //     {
-  //       state: 'pricing',
-  //       name: 'PRICING'
-  //     },
-  //     {
-  //       state: 'blank',
-  //       name: 'BLANK'
-  //     }
-  //   ]
-  // },
-  // {
-  //   state: 'landing',
-  //   name: 'LANDING',
-  //   type: 'link',
-  //   icon: 'basic-spread'
-  // },
-  // {
-  //   state: 'authentication',
-  //   name: 'AUTHENTICATION',
-  //   type: 'sub',
-  //   icon: 'basic-lock-open',
-  //   children: [
-  //     {
-  //       state: 'signin',
-  //       name: 'SIGNIN'
-  //     },
-  //     {
-  //       state: 'signup',
-  //       name: 'SIGNUP'
-  //     },
-  //     {
-  //       state: 'forgot',
-  //       name: 'FORGOT'
-  //     },
-  //     {
-  //       state: 'lockscreen',
-  //       name: 'LOCKSCREEN'
-  //     },
-    //  ]
-    // },
-  // {
-  //   state: 'error',
-  //   name: 'ERROR',
-  //   type: 'sub',
-  //   icon: 'basic-ban',
-  //   children: [
-  //     {
-  //       state: '404',
-  //       name: '404'
-  //     },
-  //     {
-  //       state: '500',
-  //       name: '500'
-  //     },
-  //     {
-  //       state: '503',
-  //       name: '503'
-  //     }
-  //   ]
-  // },
-  // {
-  //   state: 'calendar',
-  //   name: 'CALENDAR',
-  //   type: 'link',
-  //   icon: 'basic-calendar'
-  // },
-  // {
-  //   state: 'media',
-  //   name: 'MEDIA',
-  //   type: 'sub',
-  //   icon: 'basic-todo-txt',
-  //   children: [
-  //     {
-  //       state: 'grid',
-  //       name: 'GRID'
-  //     },
-  //     {
-  //       state: 'tile',
-  //       name: 'TILE'
-  //     },
-  //     {
-  //       state: 'list',
-  //       name: 'LIST'
-  //     }
-  //   ]
-  // },
-  // {
-  //   state: 'widgets',
-  //   name: 'WIDGETS',
-  //   type: 'link',
-  //   icon: 'software-scale-reduce'
-  // },
-  // {
-  //   state: 'social',
-  //   name: 'SOCIAL',
-  //   type: 'link',
-  //   icon: 'basic-elaboration-message-happy'
-  // },
-  // {
-  //   state: 'docs',
-  //   name: 'DOCS',
-  //   type: 'link',
-  //   icon: 'basic-sheet-txt'
-  // }
+  {
+    state: 'role',
+    name: 'Role',
+    type: 'sub',
+    icon: 'basic-webpage-img-txt',
+    children: [
+
+      {
+        state: 'list',
+        name: 'Roles Listing'
+      },
+      {
+        state: 'new',
+        name: 'New Role'
+      }
+    ]
+  },
+  {
+    state: 'designation',
+    name: 'Designation',
+    type: 'sub',
+    icon: 'basic-webpage-img-txt',
+    children: [
+
+      {
+        state: 'list',
+        name: 'Designations Listing'
+      },
+      {
+        state: 'new',
+        name: 'New Designation'
+      }
+    ]
+  },
+  {
+    state: 'employee',
+    name: 'Employee',
+    type: 'sub',
+    icon: 'basic-webpage-img-txt',
+    children: [
+
+      {
+        state: 'list',
+        name: 'Employees Listing'
+      },
+      {
+        state: 'new',
+        name: 'New Employee'
+      }
+    ]
+  },
 ];
 
 @Injectable()

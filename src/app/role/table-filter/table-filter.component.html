@@ -1,0 +1,29 @@
+<input type="name" class="form-control mb-3" placeholder="Type to filter the name column..." required (keyup)='updateFilter($event)'>
+<ngx-datatable
+[columns]="columns"
+[columnMode]="'force'"
+[headerHeight]="40"
+[footerHeight]="50"
+[rowHeight]="'auto'"
+[limit]="10"
+[rows]='rows'>
+
+<ngx-datatable-column *ngFor="let col of columns" [name]="col.name">
+</ngx-datatable-column>
+<ngx-datatable-column name="Actions" sortable="false" prop="id">
+  <ng-template let-row="data" let-value="value" ngx-datatable-cell-template>
+    <a _ngcontent-c16="" class="text-color" href="javascript:;" [routerLink]="['/role/edit/',value]">
+        <i _ngcontent-c16="" class="icon icon-basic-book-pencil"></i>
+        <span _ngcontent-c16=""></span>
+    </a>
+    <span class=".divider-vertical" style="padding-left:10px"></span>
+    <a _ngcontent-c16="" class="text-color" href="javascript:;" (click)= "delete(value)" onclick="return confirm('Are you sure you want to delete this item?');">
+        <i _ngcontent-c16="" class="icon icon-arrows-circle-remove"></i>
+        <span _ngcontent-c16=""></span>
+      </a>
+
+      
+  </ng-template>
+</ngx-datatable-column>
+
+</ngx-datatable>

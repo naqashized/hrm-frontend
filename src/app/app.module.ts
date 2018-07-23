@@ -18,9 +18,14 @@ import { AppComponent } from './app.component';
 
 import { HttpModule, JsonpModule } from '@angular/http';
 import { UserService } from '../services/user.service';
+import { RoleService } from '../services/role.service';
 import { LoginService } from '../services/login.service';
+import {DesignationService} from '../services/designation.service';
+import {EmployeeService} from '../services/employee.service';
+//import {AppRoutes} from './app.routing';
 import { StorageServiceModule, WebStorageService} from 'angular-webstorage-service';
 //import { CanActivate} from '@angular/router';
+import { LocationStrategy, HashLocationStrategy} from '@angular/common';
 
 import {
   MenuComponent,
@@ -55,7 +60,7 @@ export function createTranslateLoader(http: HttpClient) {
     StorageServiceModule,
     //WebStorageService,
     BrowserAnimationsModule,
-    RouterModule.forRoot(AppRoutes),
+    //RouterModule.forRoot(AppRoutes),
     FormsModule,
     HttpClientModule,
     HttpModule,
@@ -70,9 +75,10 @@ export function createTranslateLoader(http: HttpClient) {
     LoadingBarRouterModule,
     NgbModule.forRoot(),
     SidebarModule.forRoot(),
-    AgmCoreModule.forRoot({apiKey: 'YOURAPIKEY'})
+    AgmCoreModule.forRoot({apiKey: 'YOURAPIKEY'}),
+    RouterModule.forRoot(AppRoutes)
   ],
-  providers: [UserService, LoginService],
+  providers: [UserService, LoginService, RoleService, DesignationService, EmployeeService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

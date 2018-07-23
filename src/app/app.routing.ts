@@ -38,18 +38,19 @@ export const AppRoutes: Routes = [{
     path: 'user',
     loadChildren: './user/datatable.module#DatatableModule'
   }, 
+  {
+    path: 'role',
+    loadChildren: './role/role.module#RoleModule'
+  }, 
+  {
+    path: 'designation',
+    loadChildren: './designation/designation.module#DesignationModule'
+  }, 
+  {
+    path: 'employee',
+    loadChildren: './employee/employee.module#EmployeeModule'
+  },
   // {
-  //   path: 'charts',
-  //   loadChildren: './charts/charts.module#ChartsModule'
-  // }, 
-  // {
-  //   path: 'maps',
-  //   loadChildren: './maps/maps.module#MapsModule'
-  // }, 
-  // {
-  //   path: 'pages',
-  //   loadChildren: './pages/pages.module#PagesModule'
-  // }, {
   //   path: 'taskboard',
   //   loadChildren: './taskboard/taskboard.module#TaskboardModule'
   // }, {
